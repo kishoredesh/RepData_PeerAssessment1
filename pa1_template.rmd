@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 My code begins here:
 ```{r,echo=TRUE}
     #setting up current working directory
-    #setwd("c:/Users/kishored/Dropbox/MyWork/Reproducible_Research/Week2/Project1/")
+    # setwd("c:/Users/kishored/Dropbox/MyWork/Reproducible_Research/Week2/Project1/")
 
     #downloading the downloader package
     #install.packages("downloader")
@@ -45,7 +45,7 @@ We now process the data:
 * Calculate the total number of steps taken per day
 * Summarize total steps per date:
 ```{r, echo=TRUE}
-    sumSteps <- aggregate(activityData$steps ~ activityData$date, FUN=sum)
+    sumSteps <- aggregate(cleanData$steps ~ cleanData$date, FUN=sum)
     colnames(sumSteps)<- c("Date", "Steps")
 ```
 We are going to create a histogram now for the total number of steps taken each day:
